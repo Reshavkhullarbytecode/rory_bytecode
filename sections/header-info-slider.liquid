@@ -1,0 +1,51 @@
+<section style="background-color:{{ section.settings.background_color }}" class="header-info-sec">
+  <div class="header-info-row">
+    {%- for block in section.blocks -%}
+      {% if block.settings.heading != blank %}
+        <div class="header-info-col">
+          <p>{{ block.settings.heading }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {%- for block in section.blocks -%}
+      {% if block.settings.heading != blank %}
+        <div class="header-info-col">
+          <p>{{ block.settings.heading }}</p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+{% schema %}
+ {
+    "name": "Header Info Slider",
+    "settings": [
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+          "default":"#C8BE88"
+        }
+    ],
+   "blocks": [
+  {
+      "type": "Slides",
+      "name": "Slides ",
+      "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        }
+      ]
+    }
+
+   ],
+    "presets": [
+        {
+            "name": "Header Info Slider"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,37 @@
+<section class="slider-bar" style="background-color:{{ section.settings.background_color }}" class="{{ section.settings.sec_class }}">
+  <div class="page-width">
+<p >{{ section.settings.heading }}</p>
+  </div>
+</section>
+
+
+{% schema %}
+ {
+    "name": "Slider_bar_heading",
+    "settings": [
+      {
+      "type": "text",
+      "id": "sec_class",
+      "default": "Slider_bar_heading",
+      "label": "Section Class"
+    },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+          "default":"#C8BE88"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Slider_bar_heading" 
+        }
+    ]
+}
+
+{% endschema %}
